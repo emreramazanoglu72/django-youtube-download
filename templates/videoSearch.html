@@ -1,0 +1,23 @@
+{% include "layouts/navbar.html" %}
+<div class="container mt-4">
+  <div class="card text-left mb-4">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="search font-weight-bold">Video Search</label>
+        <input type="text" class="form-control" name="search" id="search" />
+        {% csrf_token %}
+      </div>
+      <button onclick="searchButton()" class="btn btn-dark w-100">
+        Search
+      </button>
+    </div>
+  </div>
+  <div class="d-flex">
+    <img
+      src="https://img.pikbest.com/58pic/35/39/61/62K58PICb88i68HEwVnm5_PIC2018.gif!w340"
+      class="loading m-auto d-none"
+    />
+  </div>
+  <div class="card-columns"></div>
+</div>
+{% include "layouts/footer.html" %}

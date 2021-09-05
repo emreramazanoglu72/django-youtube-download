@@ -1,0 +1,29 @@
+{% include "layouts/navbar.html" %}
+<div class="container mt-4 pt-4">
+  <div class="card text-center">
+    <img
+      class="card-img-top"
+      style="height: 250px; width: 250px; align-self: center"
+      src="https://www.freeiconspng.com/thumbs/youtube-logo-png/youtube-logo-png-picture-2.png"
+      alt=""
+    />
+    <div class="card-body">
+      <div class="form-group">
+        <label for="url">İndirilcek Youtube Video Url</label>
+        {% csrf_token %}
+        <input type="text" class="form-control" name="url" />
+        <button onclick="downloadButton()" class="btn btn-success mt-1 w-100">
+          İndir
+        </button>
+      </div>
+      <img
+        src="https://cdn.dribbble.com/users/1186261/screenshots/3718681/_______.gif"
+        style="height: 250px"
+        class="loading d-none"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+{% include "layouts/footer.html" %}
